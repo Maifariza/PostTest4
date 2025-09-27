@@ -123,6 +123,9 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
    
    **b. Class Service**
    
+   > <img width="108" height="26" alt="image" src="https://github.com/user-attachments/assets/2375ba40-578c-445c-a092-d4f791321a62" />
+   
+
    > <img width="665" height="142" alt="image" src="https://github.com/user-attachments/assets/c23ed2af-70d2-4734-9b35-494dd7705ed5" />
 
    > Di dalam class Service, terdapat dua versi method tampilkanTabelBarang().
@@ -137,14 +140,23 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
 
    **Penerapan Overriding pada kelas barangWarisan**
    
+   > <img width="149" height="24" alt="image" src="https://github.com/user-attachments/assets/8be3dceb-b452-4853-a2f8-6db4289dbe47" />
+   
+
    > <img width="821" height="395" alt="image" src="https://github.com/user-attachments/assets/c3ab345e-4682-44f1-9c7a-63639e10d9e3" />
 
    **Penerapan Overriding pada kelas barangUmum**
+
+   > <img width="149" height="26" alt="image" src="https://github.com/user-attachments/assets/9a8bc881-8154-4f08-b2d4-a9981b5fd603" />
    
+
    > <img width="771" height="391" alt="image" src="https://github.com/user-attachments/assets/da19560c-1b12-45d5-a761-7e5e99658b79" />
 
    **Penerapan Overriding pada kelas barangLelang**
+
+   > <img width="151" height="26" alt="image" src="https://github.com/user-attachments/assets/1e63c447-5d6a-4f25-a86f-16313f9f7fe6" />
    
+
    > <img width="848" height="463" alt="image" src="https://github.com/user-attachments/assets/28b9134a-7d1c-4778-8fcf-d03e2c2c69f0" />
 
    
