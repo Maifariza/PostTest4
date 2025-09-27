@@ -225,6 +225,7 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
 
 <h1 align="center">Struktur Program</h1>
 
+<img width="320" height="332" alt="image" src="https://github.com/user-attachments/assets/94fb60ab-124b-471c-95f1-94b9d912e031" />
 
 
 Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Berikut adalah penjelasannya.
@@ -267,7 +268,7 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
    <img width="509" height="196" alt="image" src="https://github.com/user-attachments/assets/179b67b1-bac4-45c7-9976-cb7ff08db5f7" />
    
-   > Penilaian adalah interface yang menetapkan satu kontrak: setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
+   > Penilaian adalah interface yang menetapkan satu kontrak, setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
 
    > Manfaatnya ada dua, yaitu yang pertama abstraksi yang jelas dari sudut pandang pemakai cukup diketahui bahwa “setiap barang dapat dinilai” tanpa perlu memahami rumus internalnya.
 
@@ -287,7 +288,9 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
    **a. Subclass barangLelang.java**
 
-   <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+   > <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+
+   > Kelas barangLelang.java ditempatkan di package model karena kelas ini merupakan turunan dari superclass Barang dan mewakili entitas domain dengan perilaku khusus untuk barang yang berasal dari lelang.
    
    > <img width="844" height="238" alt="image" src="https://github.com/user-attachments/assets/b9e21e51-9eff-483b-ad47-62ac99cd50f1" />
    
@@ -297,7 +300,9 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
     
    **b. Subclass baranngWarisan.java**
 
-   <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+   > <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+
+   > Kelas barangWarisan.java ditempatkan di package model karena kelas ini merupakan turunan dari superclass Barang dan merepresentasikan entitas domain untuk barang yang berasal dari warisan.
 
    > <img width="851" height="232" alt="image" src="https://github.com/user-attachments/assets/5ee49e4e-6bf5-406a-ba59-e074cf7199b5" />
 
@@ -305,7 +310,9 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
    **c. Subclass barangUmum.java**
 
-   <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+   > <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+
+   > Kelas barangUmum.java juga berada di package model karena merupakan subclass dari Barang yang mewakili barang non-lelang dan non-warisan (misalnya hibah atau pembelian).
     
    > <img width="805" height="404" alt="image" src="https://github.com/user-attachments/assets/fe3b6740-ef01-45ef-94d3-cf86287ed4c2" />
 
