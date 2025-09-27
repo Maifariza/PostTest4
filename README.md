@@ -1,4 +1,4 @@
- # POST-TEST 3 PRAKTIKUM PBO
+ # POST-TEST 4 PRAKTIKUM PBO
 
 ### **Disusun Oleh**
 
@@ -62,11 +62,15 @@ siap, ini versi **narasi** yang mengalir—bisa kamu tempel langsung di laporan/
 
 Pada program ini, konsep abstraction diterapkan dengan membuat abstract class dan interface.
 
-1. Abstract Class – Barang
+1. **Abstract Class – Barang**
+  
+   <img width="422" height="83" alt="image" src="https://github.com/user-attachments/assets/0f02ab1d-ee3d-4816-838d-42c62bc7227c" />
 
    Kelas Barang dijadikan abstract karena di dalamnya ada method yang belum memiliki implementasi, yaitu hitungAsuransi() dan getTipe(). Abstract class ini juga menyimpan properti umum semua barang (seperti id, nama, kategori, asal, tahun, dll). Dengan cara ini, kita bisa memastikan setiap subclass (barangLelang, barangWarisan, barangUmum) wajib mengisi sendiri logika khusus untuk metode yang abstrak tadi.
 
-2. Interface – Penilaian
+2. **Interface – Penilaian**
+  
+   <img width="462" height="82" alt="image" src="https://github.com/user-attachments/assets/a9af0310-3991-4deb-9b75-8ae8ec98c1f6" />
 
    Selain abstract class, program juga menggunakan interface Penilaian yang mendefinisikan method estimasiNilai(double faktorKondisi). Interface ini diimplementasikan oleh class Barang, lalu diturunkan ke semua subclass. Artinya, setiap jenis barang pasti bisa dihitung nilai estimasinya, tetapi dengan cara yang mungkin berbeda.
 
@@ -78,22 +82,26 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
 Konsep polymorphism dalam program ini muncul dalam dua bentuk: overloading dan overriding.
 
-Polymorphism dengan Overloading
+1. **Polymorphism dengan Overloading**
 
-Pada class Barang, terdapat method infoSingkat() dan infoSingkat(boolean tampilHarga).
-Keduanya memiliki nama yang sama tetapi parameter berbeda. Ini contoh method overloading, karena kita bisa memanggil fungsi infoSingkat() dengan cara yang berbeda sesuai kebutuhan (menampilkan ringkasan saja, atau ringkasan sekaligus harga).
+   <img width="702" height="182" alt="image" src="https://github.com/user-attachments/assets/ef6b875f-0008-48ae-8b05-3940f947afa1" />
 
-Selain itu, di class Service juga ada method tampilkanTabelBarang() dan tampilkanTabelBarang(boolean showFooter) yang fungsinya sama-sama menampilkan daftar barang, tapi parameternya berbeda.
+   Pada class Barang, terdapat method infoSingkat() dan infoSingkat(boolean tampilHarga). Keduanya memiliki nama yang sama tetapi parameter berbeda. Ini contoh method overloading, karena kita bisa memanggil fungsi infoSingkat() dengan cara yang berbeda sesuai kebutuhan (menampilkan ringkasan saja, atau ringkasan sekaligus harga).
 
-Polymorphism dengan Overriding
+   Selain itu, di class Service juga ada method tampilkanTabelBarang() dan tampilkanTabelBarang(boolean showFooter) yang fungsinya sama-sama menampilkan daftar barang, tapi parameternya berbeda.
 
-Pada class barangLelang, barangWarisan, dan barangUmum, semua melakukan override terhadap method abstract hitungAsuransi() dan getTipe() dari class Barang.
+2. **Polymorphism dengan Overriding**
 
-Masing-masing subclass punya logika berbeda. Misalnya, barangLelang menghitung asuransi 1.5% dengan tambahan markup, sedangkan barangWarisan hanya 0.8%, dan barangUmum 1.0%.
+   <img width="600" height="328" alt="image" src="https://github.com/user-attachments/assets/1d00d6cf-30eb-4141-9a38-b74d47da8209" />
 
-Method infoSingkat() juga dioverride supaya hasil ringkasannya otomatis menambahkan label tipe barang (LELANG, WARISAN, atau UMUM).
+  
+   Pada class barangLelang, barangWarisan, dan barangUmum, semua melakukan override terhadap method abstract hitungAsuransi() dan getTipe() dari class Barang.
 
-Bahkan di barangLelang, method estimasiNilai(double faktorKondisi) juga dioverride untuk menambahkan markup 5% dibanding perhitungan normal.
+   Masing-masing subclass punya logika berbeda. Misalnya, barangLelang menghitung asuransi 1.5% dengan tambahan markup, sedangkan barangWarisan hanya 0.8%, dan barangUmum 1.0%.
+
+   Method infoSingkat() juga dioverride supaya hasil ringkasannya otomatis menambahkan label tipe barang (LELANG, WARISAN, atau UMUM).
+
+   Bahkan di barangLelang, method estimasiNilai(double faktorKondisi) juga dioverride untuk menambahkan markup 5% dibanding perhitungan normal.
 
 Dengan penerapan ini, walaupun kita memanggil method yang sama (hitungAsuransi(), infoSingkat()), hasilnya akan berbeda tergantung objek yang digunakan. Inilah inti dari polymorphism: satu nama method, perilaku berbeda sesuai jenis objek.
 
