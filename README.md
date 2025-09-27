@@ -61,17 +61,35 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
 1. **Abstract Class – Barang**
   
-   <img width="422" height="83" alt="image" src="https://github.com/user-attachments/assets/0f02ab1d-ee3d-4816-838d-42c62bc7227c" />
+   > <img width="422" height="83" alt="image" src="https://github.com/user-attachments/assets/0f02ab1d-ee3d-4816-838d-42c62bc7227c" />
 
-   Kelas Barang dijadikan abstract karena di dalamnya ada method yang belum memiliki implementasi, yaitu hitungAsuransi() dan getTipe(). Abstract class ini juga menyimpan properti umum semua barang (seperti id, nama, kategori, asal, tahun, dll). Dengan cara ini, kita bisa memastikan setiap subclass (barangLelang, barangWarisan, barangUmum) wajib mengisi sendiri logika khusus untuk metode yang abstrak tadi.
+   > Kelas Barang dijadikan abstract class karena di dalamnya ada method yang belum memiliki implementasi, yaitu hitungAsuransi() dan getTipe(). Abstrak ini dibuat karena setiap jenis barang memiliki aturan berbeda untuk menghitung asuransi maupun penentuan tipe.
+
+   > Pada program ini terdapat sebuah metode abstrak bernama hitungAsuransi() yang didefinisikan di dalam kelas abstrak Barang, lalu dioverride oleh setiap subclass (barangLelang, barangWarisan, dan barangUmum). Istilah “asuransi” di sini bukan berarti program benar-benar menghitung premi asuransi seperti di dunia nyata. Sebaliknya, ini hanya digunakan sebagai contoh logika tambahan untuk membedakan perilaku masing-masing subclass. Tujuannya adalah untuk menunjukkan bagaimana konsep abstraction dan polymorphism (overriding) bekerja di dalam OOP.
+   
+   > - Pada barang lelang, biaya asuransinya dibuat lebih tinggi (1,5% dari nilai estimasi dengan tambahan markup).
+   
+   > - Pada barang warisan, biaya asuransinya lebih rendah (0,8% dari nilai estimasi).
+   
+   > - Pada barang umum, biaya asuransinya standar (1,0% dari nilai estimasi).
+
+   >   Dengan adanya perbedaan ini, meskipun kita memanggil method yang sama yaitu hitungAsuransi(), hasilnya akan berbeda sesuai dengan jenis objek yang digunakan. Inilah esensi dari polymorphism: satu method yang sama, tapi perilakunya bisa berbeda-beda tergantung objeknya.
 
 2. **Interface – Penilaian**
   
-   <img width="462" height="82" alt="image" src="https://github.com/user-attachments/assets/a9af0310-3991-4deb-9b75-8ae8ec98c1f6" />
+   > <img width="462" height="82" alt="image" src="https://github.com/user-attachments/assets/a9af0310-3991-4deb-9b75-8ae8ec98c1f6" />
 
-   Selain abstract class, program juga menggunakan interface Penilaian yang mendefinisikan method estimasiNilai(double faktorKondisi). Interface ini diimplementasikan oleh class Barang, lalu diturunkan ke semua subclass. Artinya, setiap jenis barang pasti bisa dihitung nilai estimasinya, tetapi dengan cara yang mungkin berbeda.
+   > Selain abstract class, program juga menggunakan interface di kelas Penilaian yang mendefinisikan method estimasiNilai(double faktorKondisi). Interface ini kemudian diimplementasikan oleh kelas Barang, sehingga otomatis diwarisi oleh semua subclass (barangLelang, barangWarisan, barangUmum). Dengan begitu, setiap jenis barang pasti memiliki metode estimasiNilai(), meskipun cara perhitungannya bisa berbeda.
+   
+   > Peran dari estimasiNilai() adalah untuk menghitung perkiraan nilai suatu barang berdasarkan faktor kondisi (misalnya kondisi “Baik”, “Sedang”, atau “Rusak”). Logikanya bisa berbeda-beda:
+   
+   > - Pada barang umum (barangUmum), perhitungannya sederhana, yaitu nilai harga perolehan dikali faktor kondisi.
+   
+   > - Pada barang lelang (barangLelang), metode ini dioverride agar menambahkan markup sekitar 5% dari nilai normal, karena barang lelang biasanya dihargai lebih tinggi di pasaran.
 
-   Jadi, kombinasi antara abstract class dan interface inilah yang menjadi bentuk nyata dari abstraction dalam program ini.
+   > - Pada barang warisan (barangWarisan), metode ini menggunakan nilai standar tanpa markup, sehingga lebih mendekati harga aslinya.
+   
+   >   Dengan ini, meskipun kita hanya memanggil method estimasiNilai() melalui referensi bertipe Barang, hasil yang keluar bisa berbeda tergantung objek aslinya. Inilah contoh nyata abstraction melalui interface sekaligus polymorphism melalui overriding.
 
 ---
 
@@ -83,31 +101,43 @@ Konsep polymorphism dalam program ini muncul dalam dua bentuk: overloading dan o
 
    **a. Class Barang**
 
-   <img width="702" height="182" alt="image" src="https://github.com/user-attachments/assets/ef6b875f-0008-48ae-8b05-3940f947afa1" />
+   > <img width="702" height="182" alt="image" src="https://github.com/user-attachments/assets/ef6b875f-0008-48ae-8b05-3940f947afa1" />
 
-   > Pada class Barang, terdapat method infoSingkat() dan infoSingkat(boolean tampilHarga). Keduanya memiliki nama yang sama tetapi parameter berbeda. Ini contoh method overloading, karena kita bisa memanggil fungsi infoSingkat() dengan cara yang berbeda sesuai kebutuhan (menampilkan ringkasan saja, atau ringkasan sekaligus harga).
+   > Pada class Barang, terdapat dua method dengan nama sama yaitu infoSingkat() dan infoSingkat(boolean tampilHarga).
+Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, tetapi cara kerjanya berbeda.
+   
+   > - Versi pertama infoSingkat() hanya menampilkan data dasar barang, seperti ID, nama, kategori, asal, dan sumber.
+   
+   > - Versi kedua infoSingkat(boolean tampilHarga) memungkinkan kita menambahkan informasi harga barang ke dalam ringkasan, tetapi hanya jika parameter tampilHarga bernilai true.
+
+   >   Overloading ini dibuat agar tidak perlu membuat method baru dengan nama berbeda hanya untuk menampilkan data yang mirip. Cukup dengan satu nama method, tetapi parameternya bisa diatur sesuai kebutuhan. Dengan cara ini, kode menjadi lebih sederhana, mudah dibaca, dan lebih fleksibel karena kita bisa memilih apakah ingin ringkasan singkat saja atau ringkasan lengkap dengan harga.
    
    **b. Class Service**
    
-   <img width="665" height="142" alt="image" src="https://github.com/user-attachments/assets/c23ed2af-70d2-4734-9b35-494dd7705ed5" />
+   > <img width="665" height="142" alt="image" src="https://github.com/user-attachments/assets/c23ed2af-70d2-4734-9b35-494dd7705ed5" />
 
-   > Selain itu, di class Service juga ada method tampilkanTabelBarang() dan tampilkanTabelBarang(boolean showFooter) yang fungsinya sama-sama menampilkan daftar barang, tapi parameternya berbeda.
+   > Di dalam class Service, terdapat dua versi method tampilkanTabelBarang().
+   
+   > - Versi pertama tidak memiliki parameter, dan secara otomatis memanggil versi kedua dengan nilai default (true).
+   
+   > - Versi kedua memiliki parameter boolean showFooter, yang dapat diatur untuk menentukan apakah setelah tabel barang ditampilkan akan ada footer tambahan (misalnya pesan “Tekan Enter untuk melanjutkan”) atau tidak.
 
-3. **Polymorphism dengan Overriding**
+   >   Tujuan overloading di sini adalah memberikan kemudahan bagi pemanggil method. Jika pemanggil tidak peduli dengan footer, cukup gunakan versi tanpa parameter. Tetapi jika ingin mengontrol apakah footer muncul atau tidak, bisa menggunakan versi dengan parameter. Dengan begini, method yang sama bisa digunakan dalam konteks yang berbeda tanpa perlu membuat nama method baru yang membingungkan.
 
-   <img width="600" height="328" alt="image" src="https://github.com/user-attachments/assets/1d00d6cf-30eb-4141-9a38-b74d47da8209" />
+2. **Polymorphism dengan Overriding**
 
-  
-   Pada class barangLelang, barangWarisan, dan barangUmum, semua melakukan override terhadap method abstract hitungAsuransi() dan getTipe() dari class Barang.
+   > <img width="600" height="328" alt="image" src="https://github.com/user-attachments/assets/1d00d6cf-30eb-4141-9a38-b74d47da8209" />
+   
+   > Setiap subclass (barangLelang, barangWarisan, dan barangUmum) melakukan override terhadap method yang diwariskan dari abstract class Barang, yaitu hitungAsuransi() dan getTipe().
+   
+   > - Pada barangLelang, perhitungan asuransinya lebih tinggi, yaitu 1,5% dari nilai estimasi dengan tambahan markup. Hal ini menggambarkan kenyataan bahwa barang lelang biasanya memiliki nilai pasar lebih tinggi.
 
-   Masing-masing subclass punya logika berbeda. Misalnya, barangLelang menghitung asuransi 1.5% dengan tambahan markup, sedangkan barangWarisan hanya 0.8%, dan barangUmum 1.0%.
-
-   Method infoSingkat() juga dioverride supaya hasil ringkasannya otomatis menambahkan label tipe barang (LELANG, WARISAN, atau UMUM).
-
-   Bahkan di barangLelang, method estimasiNilai(double faktorKondisi) juga dioverride untuk menambahkan markup 5% dibanding perhitungan normal.
-
-Dengan penerapan ini, walaupun kita memanggil method yang sama (hitungAsuransi(), infoSingkat()), hasilnya akan berbeda tergantung objek yang digunakan. Inilah inti dari polymorphism: satu nama method, perilaku berbeda sesuai jenis objek.
-
+   > - Pada barangWarisan, asuransinya lebih rendah yaitu 0,8%, karena barang warisan dianggap lebih stabil nilainya.
+   
+   > - Pada barangUmum, perhitungan asuransinya standar yaitu 1,0%.
+   
+   >   Method infoSingkat() juga dioverride di tiap subclass agar menambahkan label tipe barang. Dengan begitu, meskipun kita hanya memanggil infoSingkat(), hasil yang keluar akan otomatis berbeda sesuai dengan jenis objeknya: barang lelang akan menampilkan label LELANG, barang warisan menampilkan label WARISAN, dan barang umum menampilkan label UMUM.
+   
 ---
 
 <h1 align="center">Penjelasan Program</h1>
@@ -150,6 +180,13 @@ Dengan penerapan ini, walaupun kita memanggil method yang sama (hitungAsuransi()
    
    Artinya, barangWarisan tidak perlu menuliskan ulang properti dasar tersebut karena sudah didapat dari kelas induk.
 
+   **d. Subclass barangUmum**
+   
+   <img width="807" height="102" alt="image" src="https://github.com/user-attachments/assets/4a53b963-b3ee-4199-b97f-e4827e9dd98f" />
+   
+   blabla
+
+---
 
 <h1 align="center">Penjelasan Overriding</h1>
 
@@ -235,6 +272,8 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
  4. Penilaian.java
 
     <img width="450" height="118" alt="image" src="https://github.com/user-attachments/assets/114b0092-f773-42b8-8997-b5a30054ba67" />
+
+    > Blablabla
 
 
 ---
