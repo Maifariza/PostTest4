@@ -60,7 +60,10 @@
 Pada program ini, konsep abstraction diterapkan dengan membuat abstract class dan interface.
 
 1. **Abstract Class – Kelas Barang**
-  
+
+   > <img width="115" height="23" alt="image" src="https://github.com/user-attachments/assets/93d377fd-0747-45d4-87a5-31b6819b8604" />
+   
+
    > <img width="422" height="83" alt="image" src="https://github.com/user-attachments/assets/0f02ab1d-ee3d-4816-838d-42c62bc7227c" />
 
    > Kelas Barang dijadikan abstract class karena di dalamnya ada method yang belum memiliki implementasi, yaitu hitungAsuransi() dan getTipe(). Abstrak ini dibuat karena setiap jenis barang memiliki aturan berbeda untuk menghitung asuransi maupun penentuan tipe.
@@ -76,7 +79,10 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
    >   Dengan adanya perbedaan ini, meskipun kita memanggil method yang sama yaitu hitungAsuransi(), hasilnya akan berbeda sesuai dengan jenis objek yang digunakan. Inilah esensi dari polymorphism: satu method yang sama, tapi perilakunya bisa berbeda-beda tergantung objeknya.
 
 2. **Interface – Kelas Penilaian**
-  
+
+   > <img width="122" height="28" alt="image" src="https://github.com/user-attachments/assets/03c49970-ee3c-45c1-ab24-2d726e6a5e7c" />
+   
+
    > <img width="462" height="82" alt="image" src="https://github.com/user-attachments/assets/a9af0310-3991-4deb-9b75-8ae8ec98c1f6" />
 
    > Selain abstract class, program juga menggunakan interface di kelas Penilaian yang mendefinisikan method estimasiNilai(double faktorKondisi). Interface ini kemudian diimplementasikan oleh kelas Barang, sehingga otomatis diwarisi oleh semua subclass (barangLelang, barangWarisan, barangUmum). Dengan begitu, setiap jenis barang pasti memiliki metode estimasiNilai(), meskipun cara perhitungannya bisa berbeda.
