@@ -106,6 +106,9 @@ Konsep polymorphism dalam program ini muncul dalam dua bentuk yaitu overloading 
 1. **Polymorphism dengan Overloading**
 
    **a. Class Barang**
+   
+   > <img width="115" height="23" alt="image" src="https://github.com/user-attachments/assets/93d377fd-0747-45d4-87a5-31b6819b8604" />
+
 
    > <img width="702" height="182" alt="image" src="https://github.com/user-attachments/assets/ef6b875f-0008-48ae-8b05-3940f947afa1" />
 
@@ -130,7 +133,7 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
 
    >   Tujuan overloading di sini adalah memberikan kemudahan bagi pemanggil method. Jika pemanggil tidak peduli dengan footer, cukup gunakan versi tanpa parameter. Tetapi jika ingin mengontrol apakah footer muncul atau tidak, bisa menggunakan versi dengan parameter. Dengan begini, method yang sama bisa digunakan dalam konteks yang berbeda tanpa perlu membuat nama method baru yang membingungkan.
 
-2. **Polymorphism dengan Overriding**
+3. **Polymorphism dengan Overriding**
 
    **Penerapan Overriding pada kelas barangWarisan**
    
