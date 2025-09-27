@@ -202,7 +202,7 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
    
 2. Overriding di Subclass barangLelang
 
-   <img width="813" height="472" alt="image" src="https://github.com/user-attachments/assets/d8f88c05-0c20-4a0e-830f-007e57fef14a" />
+   > <img width="813" height="472" alt="image" src="https://github.com/user-attachments/assets/d8f88c05-0c20-4a0e-830f-007e57fef14a" />
 
 
    > Pada kelas barangLelang, method infoSingkat() ditulis ulang (override) dari method yang ada di superclass Barang. Karena kelas ini mewarisi semua atribut dan method dari Barang melalui inheritance, kita tidak perlu menuliskan ulang properti seperti id, nama, kategori, atau asal.
@@ -211,13 +211,13 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
    
 3. Overriding di Subclass barangWarisan
 
-   <img width="819" height="391" alt="image" src="https://github.com/user-attachments/assets/524c6f5e-e6ce-4b2d-83e8-90b229293b7d" />
+   > <img width="819" height="391" alt="image" src="https://github.com/user-attachments/assets/524c6f5e-e6ce-4b2d-83e8-90b229293b7d" />
 
    > Hal yang sama juga berlaku pada kelas barangWarisan. Kelas ini mewarisi seluruh atribut dan method dari kelas Barang, lalu melakukan override pada method infoSingkat(). Bedanya, output yang ditampilkan akan menambahkan label “tipe: WARISAN”.
 
 4. Overriding di Subclass barangUmum
 
-   <img width="826" height="397" alt="image" src="https://github.com/user-attachments/assets/5d237491-b941-4a49-9f59-9f51443c98e5" />
+   > <img width="826" height="397" alt="image" src="https://github.com/user-attachments/assets/5d237491-b941-4a49-9f59-9f51443c98e5" />
 
    > Pada kelas barangUmum, method-method dari superclass Barang ditulis ulang (override) agar sesuai dengan kebutuhan barang umum. Sama seperti subclass lain, kelas ini tetap mewarisi semua atribut dan method dasar dari Barang, sehingga tidak perlu menuliskan ulang properti seperti id, nama, kategori, asal, atau tahun. Bedanya, output yang ditampilkan akan menambahkan label "tipe: UMUM".
    
@@ -225,28 +225,28 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
 
 <h1 align="center">Struktur Program</h1>
 
-<img width="320" height="332" alt="image" src="https://github.com/user-attachments/assets/94fb60ab-124b-471c-95f1-94b9d912e031" />
+> <img width="320" height="332" alt="image" src="https://github.com/user-attachments/assets/94fb60ab-124b-471c-95f1-94b9d912e031" />
 
 
 Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing. Berikut adalah penjelasannya.
 
  **1. Main.java**
  
-   <img width="249" height="54" alt="image" src="https://github.com/user-attachments/assets/6fe02c80-1c21-4b84-a103-0f5112567975" />
+   > <img width="249" height="54" alt="image" src="https://github.com/user-attachments/assets/6fe02c80-1c21-4b84-a103-0f5112567975" />
 
    > Kelas Main.java terdapat di Packages com.mycompany.posttest1.main. Kelas Main berfungsi sebagai titik masuk utama program. 
 
-   <img width="884" height="781" alt="image" src="https://github.com/user-attachments/assets/bee6126e-1e87-47b4-a9c0-98c24bf7d428" />
+   > <img width="884" height="781" alt="image" src="https://github.com/user-attachments/assets/bee6126e-1e87-47b4-a9c0-98c24bf7d428" />
    
    > Kelas utama berada di Main.java yang berfungsi sebagai entry point program. Di dalam kelas ini terdapat menu interaktif yang digunakan pengguna untuk menambah, menampilkan, memperbarui, menghapus, dan mencari data barang. Main juga menjadi penghubung langsung dengan kelas Service agar logika program dapat berjalan sesuai perintah pengguna.
     
  **2. Service.java**
 
-   <img width="257" height="49" alt="image" src="https://github.com/user-attachments/assets/433eb31f-4eba-4f4c-b9ac-c8391c03418c" />
+   > <img width="257" height="49" alt="image" src="https://github.com/user-attachments/assets/433eb31f-4eba-4f4c-b9ac-c8391c03418c" />
 
    > Kelas Service berada pada package com.mycompany.posttest1.service dan bertanggung jawab atas logika bisnis serta operasi data aplikasi AntikAesthetic.
 
-   <img width="863" height="861" alt="image" src="https://github.com/user-attachments/assets/c585e91a-ceb8-4be2-9ae2-409e471aae9c" />
+   > <img width="863" height="861" alt="image" src="https://github.com/user-attachments/assets/c585e91a-ceb8-4be2-9ae2-409e471aae9c" />
    
    > Di dalamnya disediakan struktur penyimpanan List Barang untuk menampung seluruh koleksi, berikut counter nextId agar ID barang bertambah otomatis. Kelas ini juga menyimpan referensi Scanner dari Main untuk membaca input pengguna. Fungsi utama di Service meliputi:
 
@@ -262,11 +262,11 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
  **3. Penilaian.java**
 
-   <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/7c453b2c-6f16-4709-8d54-8f56d54474db" />
+   > <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/7c453b2c-6f16-4709-8d54-8f56d54474db" />
    
    > Kelas Penilaian.java terdapat di Packages com.mycompany.posttest1.service. Penilaian.java masuk dengan packgaes model karena kelas Penilaian bukan urusan tampilan atau input, melainkan aturan inti yang melekat pada entitas barang. Karena itu, ia semestinya berada bersama definisi entitas (Barang dan turunannya) di paket model.
 
-   <img width="509" height="196" alt="image" src="https://github.com/user-attachments/assets/179b67b1-bac4-45c7-9976-cb7ff08db5f7" />
+   > <img width="509" height="196" alt="image" src="https://github.com/user-attachments/assets/179b67b1-bac4-45c7-9976-cb7ff08db5f7" />
    
    > Penilaian adalah interface yang menetapkan satu kontrak. Setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
 
@@ -276,11 +276,11 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
  **4. Barang.java**
  
-   <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
+   > <img width="267" height="120" alt="image" src="https://github.com/user-attachments/assets/c3e4d611-14ad-46f7-a7f9-d45a2f8b5f99" />
 
    > Barang berada di package com.mycompany.posttest1.model karena ia adalah fondasi struktur data dan kontrak perilaku untuk seluruh barang dalam program ini.
 
-   <img width="756" height="844" alt="image" src="https://github.com/user-attachments/assets/ca35764e-ce02-4a13-afc3-b3bb7e5e2a90" />
+   > <img width="756" height="844" alt="image" src="https://github.com/user-attachments/assets/ca35764e-ce02-4a13-afc3-b3bb7e5e2a90" />
    
    > Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
 
