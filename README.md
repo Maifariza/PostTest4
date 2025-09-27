@@ -93,7 +93,7 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
 ---
 
-<h1 align="center">Penjelasan Penerapan Polymorphism</h1>
+<h1 align="center">📌 Penjelasan Penerapan Polymorphism</h1>
 
 Konsep polymorphism dalam program ini muncul dalam dua bentuk: overloading dan overriding.
 
@@ -140,7 +140,7 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
    
 ---
 
-<h1 align="center">Penjelasan Program</h1>
+<h1 align="center">📌 Penjelasan Program</h1>
 
 1. Encapsulation (Getter dan Setter)
 
@@ -188,7 +188,7 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
 
 ---
 
-<h1 align="center">Penjelasan Overriding</h1>
+<h1 align="center">📌 Penjelasan Overriding</h1>
 
 Dalam program ini, konsep overriding digunakan agar sistem dapat menampilkan informasi barang secara lebih jelas dan sesuai dengan jenisnya. Secara sederhana, overriding berarti sebuah kelas turunan dapat menimpa atau mengganti perilaku method yang diwarisi dari kelas induk.
 
@@ -223,7 +223,7 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
    
 ---
 
-<h1 align="center">Struktur Program</h1>
+<h1 align="center">✨ Struktur Program ✨</h1>
 
 > <img width="320" height="332" alt="image" src="https://github.com/user-attachments/assets/94fb60ab-124b-471c-95f1-94b9d912e031" />
 
