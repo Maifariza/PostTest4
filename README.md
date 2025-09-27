@@ -95,7 +95,7 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
 <h1 align="center">📌 Penjelasan Penerapan Polymorphism 📌</h1>
 
-Konsep polymorphism dalam program ini muncul dalam dua bentuk: overloading dan overriding.
+Konsep polymorphism dalam program ini muncul dalam dua bentuk yaitu overloading dan overriding.
 
 1. **Polymorphism dengan Overloading**
 
