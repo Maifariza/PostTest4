@@ -55,7 +55,7 @@
 
 ---
 
-<h1 align="center">Penjelasan Penerapan Abstraction</h1>
+<h1 align="center">📌 Penjelasan Penerapan Abstraction 📌</h1>
 
 Pada program ini, konsep abstraction diterapkan dengan membuat abstract class dan interface.
 
@@ -93,7 +93,7 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
 ---
 
-<h1 align="center">📌 Penjelasan Penerapan Polymorphism</h1>
+<h1 align="center">📌 Penjelasan Penerapan Polymorphism 📌</h1>
 
 Konsep polymorphism dalam program ini muncul dalam dua bentuk: overloading dan overriding.
 
@@ -140,7 +140,7 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
    
 ---
 
-<h1 align="center">📌 Penjelasan Program</h1>
+<h1 align="center">📌 Penjelasan Program 📌</h1>
 
 1. Encapsulation (Getter dan Setter)
 
@@ -188,7 +188,7 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
 
 ---
 
-<h1 align="center">📌 Penjelasan Overriding</h1>
+<h1 align="center">📌 Penjelasan Overriding 📌</h1>
 
 Dalam program ini, konsep overriding digunakan agar sistem dapat menampilkan informasi barang secara lebih jelas dan sesuai dengan jenisnya. Secara sederhana, overriding berarti sebuah kelas turunan dapat menimpa atau mengganti perilaku method yang diwarisi dari kelas induk.
 
@@ -320,7 +320,7 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
 ---
 
-<h1 align="center">Alur Program AntikAesthetic</h1>
+<h1 align="center">📝 Alur Program AntikAesthetic 📝</h1>
 
   Saat pertama kali dijalankan, sistem langsung menyiapkan data awal berupa beberapa barang antik yang otomatis dimasukkan ke dalam koleksi. Setelah itu, pengguna langsung dibawa ke menu utama yang berisi enam pilihan, yaitu tambah barang, tampilkan barang, perbarui barang, hapus barang, cari barang, dan keluar program.
 
