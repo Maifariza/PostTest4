@@ -59,7 +59,7 @@
 
 Pada program ini, konsep abstraction diterapkan dengan membuat abstract class dan interface.
 
-1. **Abstract Class – Barang**
+1. **Abstract Class – Kelas Barang**
   
    > <img width="422" height="83" alt="image" src="https://github.com/user-attachments/assets/0f02ab1d-ee3d-4816-838d-42c62bc7227c" />
 
@@ -75,7 +75,7 @@ Pada program ini, konsep abstraction diterapkan dengan membuat abstract class da
 
    >   Dengan adanya perbedaan ini, meskipun kita memanggil method yang sama yaitu hitungAsuransi(), hasilnya akan berbeda sesuai dengan jenis objek yang digunakan. Inilah esensi dari polymorphism: satu method yang sama, tapi perilakunya bisa berbeda-beda tergantung objeknya.
 
-2. **Interface – Penilaian**
+2. **Interface – Kelas Penilaian**
   
    > <img width="462" height="82" alt="image" src="https://github.com/user-attachments/assets/a9af0310-3991-4deb-9b75-8ae8ec98c1f6" />
 
@@ -268,7 +268,7 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
    <img width="509" height="196" alt="image" src="https://github.com/user-attachments/assets/179b67b1-bac4-45c7-9976-cb7ff08db5f7" />
    
-   > Penilaian adalah interface yang menetapkan satu kontrak, setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
+   > Penilaian adalah interface yang menetapkan satu kontrak. Setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
 
    > Manfaatnya ada dua, yaitu yang pertama abstraksi yang jelas dari sudut pandang pemakai cukup diketahui bahwa “setiap barang dapat dinilai” tanpa perlu memahami rumus internalnya.
 
