@@ -126,7 +126,18 @@ Keduanya sama-sama digunakan untuk menampilkan informasi ringkas sebuah barang, 
 
 2. **Polymorphism dengan Overriding**
 
-   > <img width="600" height="328" alt="image" src="https://github.com/user-attachments/assets/1d00d6cf-30eb-4141-9a38-b74d47da8209" />
+   **Penerapan Overriding pada kelas barangWarisan**
+   
+   > <img width="821" height="395" alt="image" src="https://github.com/user-attachments/assets/c3ab345e-4682-44f1-9c7a-63639e10d9e3" />
+
+   **Penerapan Overriding pada kelas barangUmum**
+   
+   > <img width="771" height="391" alt="image" src="https://github.com/user-attachments/assets/da19560c-1b12-45d5-a761-7e5e99658b79" />
+
+   **Penerapan Overriding pada kelas barangLelang**
+   
+   > <img width="848" height="463" alt="image" src="https://github.com/user-attachments/assets/28b9134a-7d1c-4778-8fcf-d03e2c2c69f0" />
+
    
    > Setiap subclass (barangLelang, barangWarisan, dan barangUmum) melakukan override terhadap method yang diwariskan dari abstract class Barang, yaitu hitungAsuransi() dan getTipe().
    
