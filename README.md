@@ -110,6 +110,82 @@ Dengan penerapan ini, walaupun kita memanggil method yang sama (hitungAsuransi()
 
 ---
 
+<h1 align="center">Penjelasan Program</h1>
+
+1. Encapsulation (Getter dan Setter)
+
+   <img width="720" height="213" alt="image" src="https://github.com/user-attachments/assets/77820a0e-344b-4313-b538-48370a406f25" />
+
+   Pada kelas Barang, semua atribut didefinisikan dengan akses private, misalnya private int id, private String nama, dan seterusnya. Kata kunci private berarti variabel tersebut tidak bisa dipanggil atau diubah secara langsung dari luar kelas. Jadi, kalau ada kode di luar kelas Barang yang mencoba mengakses barang.id secara langsung, program akan error.
+   
+   Untuk memberikan akses, dibuatlah getter dan setter:
+   
+   <img width="784" height="590" alt="image" src="https://github.com/user-attachments/assets/e0ee01a3-cb76-4500-97b3-067164af989c" />
+
+   Getter adalah method yang dipakai untuk membaca nilai, contohnya getNama() untuk mengambil nilai dari atribut nama. Sedangkan setter adalah method yang dipakai untuk mengubah nilai, contohnya setNama(String nama) untuk mengganti nama barang.
+
+   Dengan cara ini, kita bisa menambahkan aturan validasi di dalam setter, misalnya memastikan harga tidak boleh bernilai negatif, atau tahun tidak boleh lebih kecil dari nol. Jadi, selain melindungi data, encapsulation juga memberi kendali penuh kepada programmer agar data yang masuk tetap konsisten dan valid.
+
+2. Inheritance
+
+   **a. Superclass Barang**
+
+      <img width="302" height="220" alt="image" src="https://github.com/user-attachments/assets/bc702751-1b07-4461-8873-70d7208efe00" />
+
+      Pada program ini, Barang adalah superclass. Di dalamnya sudah ada atribut umum seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Juga ada method infoSingkat() yang menampilkan data inti barang.
+
+   **b. Subclass barangLelang**
+   
+   <img width="797" height="91" alt="image" src="https://github.com/user-attachments/assets/70262dc2-52d3-444b-b156-ad38d36e5468" />
+
+    Kelas barangLelang adalah subclass yang dibuat dengan kata kunci extends Barang. Artinya, kelas ini otomatis memiliki semua atribut dan method yang ada di kelas Barang tanpa perlu menuliskannya kembali.
+   
+   Artinya, barangLelang tidak perlu menuliskan ulang properti dasar tersebut karena sudah didapat dari kelas induk.
+
+   **c. Subclass barangWarisan**
+   
+   <img width="790" height="97" alt="image" src="https://github.com/user-attachments/assets/7dcba63a-9c14-49de-bf6d-9cd574d74c46" />
+
+   Kelas barangWarisan adalah subclass yang dibuat dengan kata kunci extends Barang. Artinya, kelas ini otomatis memiliki semua atribut dan method yang ada di kelas Barang tanpa perlu menuliskannya kembali.
+   
+   Artinya, barangWarisan tidak perlu menuliskan ulang properti dasar tersebut karena sudah didapat dari kelas induk.
+
+
+<h1 align="center">Penjelasan Overriding</h1>
+
+Dalam program ini, konsep overriding digunakan agar sistem dapat menampilkan informasi barang secara lebih jelas dan sesuai dengan jenisnya. Secara sederhana, overriding berarti sebuah kelas turunan dapat menimpa atau mengganti perilaku method yang diwarisi dari kelas induk.
+
+Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil pencarian. Saat semua objek dipanggil menggunakan method yang sama, yaitu infoSingkat(), keluaran yang muncul akan otomatis menyesuaikan dengan kelas masing-masing. Barang biasa akan ditampilkan dengan informasi standar, sedangkan barang lelang dan barang warisan akan menampilkan keterangan tambahan sesuai tipenya.
+
+1. Method di Super Class (Barang)
+
+   <img width="546" height="109" alt="image" src="https://github.com/user-attachments/assets/cc08e63a-4e99-4d41-8144-7deb76c4344c" />
+
+     Pada kelas induk Barang, method infoSingkat() berfungsi untuk menampilkan informasi umum seperti ID, nama, kategori, asal, dan sumber barang. Method ini sudah cukup jika barang tersebut tidak memiliki keterangan khusus. Namun, disini saya gunakan untuk mengetahui barang yang berasal dari lelang atau warisan, agar informasi yang ditampilkan lebih spesifik.
+   
+2. Overriding di Subclass barangLelang
+
+   <img width="813" height="472" alt="image" src="https://github.com/user-attachments/assets/d8f88c05-0c20-4a0e-830f-007e57fef14a" />
+
+
+   Pada kelas barangLelang, method infoSingkat() ditulis ulang (override) dari method yang ada di superclass Barang. Karena kelas ini mewarisi semua atribut dan method dari Barang melalui inheritance, kita tidak perlu menuliskan ulang properti seperti id, nama, kategori, atau asal.
+
+   Namun, agar informasi lebih spesifik, subclass ini menambahkan keterangan tambahan berupa “tipe: LELANG”. Artinya, meskipun dasarnya sama dengan Barang, ketika objek barangLelang dipanggil, hasil yang muncul akan lebih detail dan menunjukkan bahwa barang tersebut diperoleh dari lelang.
+   
+4. Overriding di Subclass barangWarisan
+
+   <img width="819" height="391" alt="image" src="https://github.com/user-attachments/assets/524c6f5e-e6ce-4b2d-83e8-90b229293b7d" />
+
+
+   Hal yang sama juga berlaku pada kelas barangWarisan. Kelas ini mewarisi seluruh atribut dan method dari kelas Barang, lalu melakukan override pada method infoSingkat(). Bedanya, output yang ditampilkan akan menambahkan label “tipe: WARISAN”.
+
+5. Overriding di Subclass barangUmum
+
+   <img width="826" height="397" alt="image" src="https://github.com/user-attachments/assets/5d237491-b941-4a49-9f59-9f51443c98e5" />
+
+   
+---
+
 <h1 align="center">Struktur Program</h1>
 
 Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-masing.
