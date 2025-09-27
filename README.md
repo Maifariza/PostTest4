@@ -215,7 +215,7 @@ Manfaat overriding terlihat ketika program menampilkan daftar barang atau hasil 
 
    > Hal yang sama juga berlaku pada kelas barangWarisan. Kelas ini mewarisi seluruh atribut dan method dari kelas Barang, lalu melakukan override pada method infoSingkat(). Bedanya, output yang ditampilkan akan menambahkan label “tipe: WARISAN”.
 
-5. Overriding di Subclass barangUmum
+4. Overriding di Subclass barangUmum
 
    <img width="826" height="397" alt="image" src="https://github.com/user-attachments/assets/5d237491-b941-4a49-9f59-9f51443c98e5" />
 
@@ -241,9 +241,13 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
 
  **3. Penilaian.java**
 
-   <img width="450" height="118" alt="image" src="https://github.com/user-attachments/assets/114b0092-f773-42b8-8997-b5a30054ba67" />
+   <img width="509" height="196" alt="image" src="https://github.com/user-attachments/assets/179b67b1-bac4-45c7-9976-cb7ff08db5f7" />
    
-   > Blablabla
+   > Penilaian adalah interface yang menetapkan satu kontrak: setiap barang harus mampu menghitung nilai estimasinya melalui metode estimasiNilai(double faktorKondisi). Kontrak ini dipasang pada kelas abstrak Barang, sehingga seluruh turunannya otomatis memiliki kemampuan yang sama.
+
+   > Manfaatnya ada dua, yaitu yang pertama abstraksi yang jelas dari sudut pandang pemakai cukup diketahui bahwa “setiap barang dapat dinilai” tanpa perlu memahami rumus internalnya.
+
+   > Lalu, yang kedua Fleksibilitas (polimorfisme), implementasi dapat berbeda pada masing-masing subclass. Ketika estimasiNilai(...) dipanggil melalui referensi bertipe Barang, hasil yang diperoleh menyesuaikan jenis objek konkretnya. Dengan demikian, apabila suatu saat ditambahkan jenis barang baru, cukup membuat subclass baru yang memenuhi kontrak Penilaian tanpa mengubah kode yang sudah ada.
 
  **4. Barang.java**
    
@@ -251,7 +255,7 @@ Program yang saya buat terdiri dari beberapa kelas yang memiliki peran masing-ma
    
    > Untuk data inti, saya menggunakan package model. Di dalamnya terdapat kelas Barang sebagai superclass. Kelas Barang menyimpan semua properti umum, seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan. Semua atribut dibuat private dan diakses menggunakan getter dan setter, sehingga konsep encapsulation diterapkan.
 
-Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. Kedua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat().
+> Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWarisan. Kedua kelas ini mewarisi semua atribut yang ada di kelas Barang, tapi punya cara kerja khusus karena saya menggunakan method overriding pada method infoSingkat().
 
    **a. Subclass barangLelang.java**
    
@@ -270,10 +274,8 @@ Dari kelas Barang, saya membuat dua subclass, yaitu barangLelang dan barangWaris
    **c. Subclass barangUmum.java**
     
    > <img width="805" height="404" alt="image" src="https://github.com/user-attachments/assets/fe3b6740-ef01-45ef-94d3-cf86287ed4c2" />
-    
-   > Blablabla
 
-
+   > Kelas barangUmum merupakan kelas turunan (subclass) yang meng-extends Barang untuk mewakili barang yang bukan lelang dan bukan warisan (misalnya hibah atau pembelian). Karena mewarisi dari Barang, seluruh atribut dasar seperti id, nama, kategori, asal, tahun, material, kondisi, sumber, dan hargaPerolehan sudah tersedia tanpa perlu didefinisikan ulang.
 
 ---
 
